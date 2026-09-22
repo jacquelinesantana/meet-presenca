@@ -1,0 +1,30 @@
+{
+  "name": "meet-presenca",
+  "version": "1.6.0",
+  "description": "Extensão Chrome para captura de presença em reuniões do Google Meet",
+  "private": true,
+  "scripts": {
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "lib/utils.js",
+      "lib/constants.js",
+      "content/tracker.js",
+      "content/noise-patterns.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ]
+  }
+}

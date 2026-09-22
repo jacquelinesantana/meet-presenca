@@ -26,6 +26,8 @@
       "all_frames": false,
       "js": [
         "lib/utils.js",
+        "lib/constants.js",
+        "content/noise-patterns.js",
         "content/selectors.js",
         "content/tracker.js",
         "content/content.js"

@@ -22,7 +22,8 @@
       <section class="filter-section">
         <label for="minDwellInput">Tempo mínimo para presença:</label>
         <div class="filter-controls">
-          <input type="number" id="minDwellInput" min="0" max="999" step="1" value="0" title="Participantes com menos tempo serão excluídos da tabela e exportações" />
+          <input type="number" id="minDwellInput" min="0" max="999" step="1" value="0"
+            title="Participantes com menos tempo serão excluídos da tabela e exportações" />
           <span class="filter-unit">minutos</span>
           <span id="filterInfo" class="filter-info"></span>
         </div>
@@ -70,7 +71,19 @@
       </footer>
     </main>
 
+    <!-- Utilitários compartilhados (sem DOM) -->
     <script src="../lib/utils.js"></script>
+    <script src="../lib/constants.js"></script>
+
+    <!-- Módulos do popup (ordem: dependências antes dos dependentes) -->
+    <script src="modules/storage.js"></script>
+    <script src="modules/live.js"></script>
+    <script src="modules/merge.js"></script>
+    <script src="modules/render.js"></script>
+    <script src="modules/export.js"></script>
+    <script src="modules/roster.js"></script>
+
+    <!-- Orquestrador -->
     <script src="popup.js"></script>
   </body>
 </html>
